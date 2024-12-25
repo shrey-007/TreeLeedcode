@@ -11,4 +11,20 @@ public class TreeNode {
           this.left = left;
           this.right = right;
       }
+
+    @Override
+    public String toString() {
+        return "TreeNode{" +
+                "val=" + val +
+                ", left=" + left +
+                ", right=" + right +
+                '}';
+    }
+
+    public static void inOrder(TreeNode root){
+          if(root==null) return;
+          inOrder(root.left);
+          System.out.print(root.val+" ");
+          inOrder(root.right);
+    }
 }
